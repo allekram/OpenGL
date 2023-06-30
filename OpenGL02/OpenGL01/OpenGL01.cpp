@@ -32,6 +32,8 @@ float lastFrame = 0.0f;
 
 //光源
 vec3 lightPos(1.2f, 1.0f, 2.0f);
+float lightRotateAngle = 0.01f;
+
 
 int main()
 {
@@ -174,6 +176,11 @@ int main()
         lightingShader.use();
         lightingShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
         lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+
+        //让光源旋转
+        mat4 lightRotation = rotate(mat4(1.0), radians(lightRotateAngle), vec3(0.0, 1.0, 0.0));
+        lightPos = vec3(lightRotation * vec4(lightPos, 1.0));
+
         lightingShader.setVec3("lightPos", lightPos);
         lightingShader.setVec3("viewPos", camera.Position);
 
@@ -192,6 +199,7 @@ int main()
         glDrawArrays(GL_TRIANGLES, 0, 36);
 
         //渲染灯
+        
         lightCubeShader.use();
         lightCubeShader.setMat4("projection", projection);
         lightCubeShader.setMat4("view", view);
@@ -199,7 +207,6 @@ int main()
         model = translate(model, lightPos);
         model = scale(model, vec3(0.2f));
         lightCubeShader.setMat4("model", model);
-
         glBindVertexArray(lightCubeVAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
 
