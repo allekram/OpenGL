@@ -18,3 +18,6 @@ OpenGL学习记录
 
 ### [06 多光源](https://github.com/allekram/OpenGL/tree/2b9cdc5c48657845dfb5f866f3d364b0ea50d005/OpenGL06)
 ![image](https://github.com/allekram/OpenGL/blob/2b9cdc5c48657845dfb5f866f3d364b0ea50d005/OpenGL06/06.gif)
+
+### [07 模型加载](https://github.com/allekram/OpenGL/tree/2d9f7c924a26ca948deb73986f15edeaa872ddb8/OpenGL07)
+![image](https://github.com/allekram/OpenGL/blob/2d9f7c924a26ca948deb73986f15edeaa872ddb8/OpenGL07/07.gif)
