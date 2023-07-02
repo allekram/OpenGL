@@ -1,5 +1,5 @@
 # OpenGL学习记录
-配环境时，include文件夹和lib文件夹中的assimp库需要自行编译添加，其他文件基本齐全，可直接使用配置。
+配环境时，assimp库需要自行编译添加，其他include和lib基本齐全，可根据自己情况配置使用。
 ## 光照
 ### [01 颜色](https://github.com/allekram/OpenGL/tree/9ab724fdfdc72a545f48fc4d30e3cc503c43cce5/OpenGL01)
 ![image](https://github.com/allekram/OpenGL/blob/adcc4be1eec2a00acb4717044da37d71f62fb7c7/OpenGL01/image.png)
